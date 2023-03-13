@@ -17,11 +17,12 @@ public class REPORT {
     private int free_per_month;
 
 
-    @OneToOne(mappedBy = "room")
+    @OneToOne(mappedBy = "report")
     private ROOM room_report;
 
 
     public REPORT(int EXAMPLE){
+
         this.clients_per_month = EXAMPLE;
     }
 

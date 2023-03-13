@@ -20,7 +20,7 @@ public class ROOM {
     private int price;
 
 
-    @OneToMany(mappedBy = "client")
+    @OneToMany(mappedBy = "client_room")
     private List<CLIENT> room_clients;
 
     @OneToOne

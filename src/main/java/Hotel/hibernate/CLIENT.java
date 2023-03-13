@@ -1,7 +1,7 @@
 package Hotel.hibernate;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "client")
@@ -11,9 +11,9 @@ public class CLIENT extends PERSON{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCLIENT;
     @Column(name = "arrival_date")
-    private Date arrival_date;
+    private LocalDate arrival_date;
     @Column(name = "departure_date")
-    private Date departure_date;
+    private LocalDate departure_date;
     @Column(name = "length_of_stay")
     private int length_of_stay;
 
@@ -50,18 +50,18 @@ public class CLIENT extends PERSON{
     }
 
 
-    public Date getArrival_date(){
+    public LocalDate getArrival_date(){
         return this.arrival_date;
     }
-    public void setArrival_date(Date arrival_date){
+    public void setArrival_date(LocalDate arrival_date){
         this.arrival_date = arrival_date;
     }
 
 
-    public Date getDeparture_date(){
+    public LocalDate getDeparture_date(){
         return this.departure_date;
     }
-    public void setDeparture_date(Date departure_date){
+    public void setDeparture_date(LocalDate departure_date){
         this.departure_date = departure_date;
     }
 

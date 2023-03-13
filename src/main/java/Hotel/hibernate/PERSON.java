@@ -1,13 +1,13 @@
 package Hotel.hibernate;
 
 import javax.persistence.MappedSuperclass;
-import java.util.Date;
+import java.time.LocalDate;
 
 @MappedSuperclass
 public class PERSON {
     protected String name;
     protected String surname;
-    protected Date date_of_birth;
+    protected LocalDate date_of_birth;
 
     public PERSON(){
 
@@ -29,10 +29,10 @@ public class PERSON {
     }
 
 
-    public Date getDate_of_birth(){
+    public LocalDate getDate_of_birth(){
         return this.date_of_birth;
     }
-    public void setDate_of_birth(Date date_of_birth){
+    public void setDate_of_birth(LocalDate date_of_birth){
         this.date_of_birth = date_of_birth;
     }
 
